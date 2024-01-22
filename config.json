@@ -1,0 +1,4 @@
+{
+  "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
+  "db_url": "postgres://selltech:selltech@db:5432/selltech?sslmode=disable"
+}
