@@ -1,5 +1,5 @@
 package internal
 
 var (
-	isUpdating bool
+	IsUpdating bool
 )

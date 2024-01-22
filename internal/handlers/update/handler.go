@@ -26,6 +26,11 @@ func New(config internal.AppConfig, repository repository) *Handler {
 
 // UpdateHandler обработчик для обновления данных
 func (h *Handler) UpdateHandler(w http.ResponseWriter, r *http.Request) {
+	internal.IsUpdating = true
+	defer func() {
+		internal.IsUpdating = false
+	}()
+
 	response, err := http.Get(h.config.URL)
 	if err != nil {
 		h.sendResponse(w, false, "service unavailable", http.StatusServiceUnavailable)
