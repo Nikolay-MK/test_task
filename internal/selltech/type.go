@@ -2,8 +2,10 @@ package selltech
 
 // SDNEntry структура для разбора XML
 type SDNEntry struct {
+	Uid       string `xml:"uid"`
 	FirstName string `xml:"firstName"`
 	LastName  string `xml:"lastName"`
+	SDNType   string `xml:"sdnType"`
 }
 
 // SDNList структура для разбора XML
